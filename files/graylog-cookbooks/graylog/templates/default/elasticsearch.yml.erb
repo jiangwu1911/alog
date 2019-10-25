@@ -1,0 +1,19 @@
+cluster.name: <%= node['graylog']['elasticsearch']['cluster_name'] %>
+path.data: <%= node['graylog']['elasticsearch']['data_directory'] %>
+path.repo: /var/opt/graylog/repository/
+path.logs: /var/log/graylog/elasticsearch/
+script.inline: false
+script.search: false
+script.engine.painless.inline: true
+script.engine.painless.stored.search:   true
+script.engine.painless.stored.aggs:     true
+script.painless.regex.enabled: true
+network.host: 127.0.0.1
+bootstrap.system_call_filter: false
+
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+node.master: true
+node.data: true
+#discovery.zen.ping.unicast.hosts: ["10.0.0.1", "10.0.0.2", "10.0.0.3"]
+#discovery.zen.minimum_master_nodes: 2

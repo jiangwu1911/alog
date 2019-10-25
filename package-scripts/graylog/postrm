@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# Perform necessary graylog removal steps
+# after package is uninstalled.
+#
+
+cleanup_symlinks() {
+  binaries="graylog-ctl"
+  for binary in $binaries; do
+    rm -f /usr/bin/$binary
+  done
+}
+
+cleanup_data() {
+  directories="/etc/graylog /var/opt/graylog /opt/graylog"
+  for directory in $directories; do
+    rm -rf $directory
+  done
+}
+
+case "$1" in
+    # Remove data files on purge
+    purge)
+        cleanup_symlinks
+        cleanup_data
+    ;;
+
+    remove)
+        cleanup_symlinks
+    ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    ;;
+
+    *)
+        cleanup_symlinks
+        cleanup_data
+    ;;
+esac
+
+echo "Graylog has been uninstalled!"
+
+exit 0

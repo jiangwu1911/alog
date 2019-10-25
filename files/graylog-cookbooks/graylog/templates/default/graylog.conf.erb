@@ -1,0 +1,142 @@
+# Cluster settings
+<%= config_option 'is_master', @is_master -%>
+<%= config_option 'node_id_file', node['graylog']['node_id_file'] -%>
+
+# General
+<%= config_option 'bin_dir', node['graylog']['bin_dir'] -%>
+<%= config_option 'data_dir', node['graylog']['data_dir'] -%>
+<%= config_option 'plugin_dir', node['graylog']['plugin_dir'] -%>
+<%= config_option 'disable_sigar', node['graylog']['disable_sigar'] -%>
+<%= config_option 'dashboard_widget_default_cache_time', node['graylog']['dashboard_widget_default_cache_time'] -%>
+
+# Access secrets
+<%= config_option 'password_secret', node['graylog']['password_secret'] -%>
+<%= config_option 'root_username', node['graylog']['root_username'] -%>
+<%= config_option 'root_email', node['graylog']['root_email'] -%>
+<%= config_option 'root_timezone', node['graylog']['root_timezone'] -%>
+<%= config_option 'root_password_sha2', node['graylog']['root_password_sha2'] -%>
+
+# Web interface
+<%= config_option 'http_bind_address', node['graylog']['http']['bind_address'] -%>
+<%= config_option 'http_publish_uri', node['graylog']['http']['publish_uri'] -%>
+<%= config_option 'http_external_uri', node['graylog']['http']['external_uri'] -%>
+<%= config_option 'http_enable_cors', node['graylog']['http']['enable_cors'] -%>
+<%= config_option 'http_enable_gzip', node['graylog']['http']['enable_gzip'] -%>
+<%= config_option 'http_max_header_size', node['graylog']['http']['max_header_size'] -%>
+<%= config_option 'http_thread_pool_size', node['graylog']['http']['thread_pool_size'] -%>
+<%= config_option 'http_enable_tls', node['graylog']['http']['enable_tls'] -%>
+<%= config_option 'http_tls_cert_file', node['graylog']['http']['tls_cert_file'] -%>
+<%= config_option 'http_tls_key_file', node['graylog']['http']['tls_key_file'] -%>
+<%= config_option 'http_tls_key_password', @http_tls_key_password -%>
+
+# Proxies
+<%= config_option 'trusted_proxies', node['graylog']['trusted_proxies'] -%>
+
+# Search options
+<%= config_option 'allow_leading_wildcard_searches', node['graylog']['allow_leading_wildcard_searches'] -%>
+<%= config_option 'allow_highlighting', node['graylog']['allow_highlighting'] -%>
+
+# Elasticsearch
+<%= config_option 'elasticsearch_hosts', node['graylog']['elasticsearch']['hosts'] -%>
+<%= config_option 'elasticsearch_connect_timeout', node['graylog']['elasticsearch']['connect_timeout'] -%>
+<%= config_option 'elasticsearch_socket_timeout', node['graylog']['elasticsearch']['socket_timeout'] -%>
+<%= config_option 'elasticsearch_idle_timeout', node['graylog']['elasticsearch']['idle_timeout'] -%>
+<%= config_option 'elasticsearch_max_total_connections', node['graylog']['elasticsearch']['max_total_connections'] -%>
+<%= config_option 'elasticsearch_max_total_connections_per_route', node['graylog']['elasticsearch']['max_total_connections_per_route'] -%>
+<%= config_option 'elasticsearch_max_retries', node['graylog']['elasticsearch']['max_retries'] -%>
+<%= config_option 'elasticsearch_discovery_enabled', node['graylog']['elasticsearch']['discovery_enabled'] -%>
+<%= config_option 'elasticsearch_discovery_filter', node['graylog']['elasticsearch']['discovery_filter'] -%>
+<%= config_option 'elasticsearch_discovery_frequency', node['graylog']['elasticsearch']['discovery_frequency'] -%>
+<%= config_option 'elasticsearch_compression_enabled', node['graylog']['elasticsearch']['compression_enabled'] -%>
+
+<%= config_option 'elasticsearch_index_prefix', node['graylog']['elasticsearch']['index_prefix'] -%>
+<%= config_option 'elasticsearch_analyzer', node['graylog']['elasticsearch']['analyzer'] -%>
+<%= config_option 'elasticsearch_disable_version_check', node['graylog']['elasticsearch']['disable_version_check'] -%>
+<%= config_option 'elasticsearch_template_name', node['graylog']['elasticsearch']['template_name'] -%>
+<%= config_option 'output_batch_size', node['graylog']['elasticsearch']['output_batch_size'] -%>
+<%= config_option 'output_flush_interval', node['graylog']['elasticsearch']['output_flush_interval'] -%>
+<%= config_option 'output_fault_count_threshold', node['graylog']['elasticsearch']['output_fault_count_threshold'] -%>
+<%= config_option 'output_fault_penalty_seconds', node['graylog']['elasticsearch']['output_fault_penalty_seconds'] -%>
+<%= config_option 'no_retention', node['graylog']['no_retention'] -%>
+<%= config_option 'disable_index_optimization', node['graylog']['elasticsearch']['disable_index_optimization'] -%>
+<%= config_option 'elasticsearch_index_optimization_jobs', node['graylog']['elasticsearch']['elasticsearch_index_optimization_jobs'] -%>
+<%= config_option 'index_optimization_max_num_segments', node['graylog']['elasticsearch']['index_optimization_max_num_segments'] -%>
+<%= config_option 'index_ranges_cleanup_interval', node['graylog']['elasticsearch']['index_ranges_cleanup_interval'] -%>
+<%= config_option 'index_field_type_periodical_interval', node['graylog']['elasticsearch']['index_field_type_periodical_interval'] -%>
+
+# Processors
+<%= config_option 'processbuffer_processors', node['graylog']['processbuffer_processors'] -%>
+<%= config_option 'outputbuffer_processors', node['graylog']['outputbuffer_processors'] -%>
+<%= config_option 'async_eventbus_processors', node['graylog']['async_eventbus_processors'] -%>
+<%= config_option 'outputbuffer_processor_keep_alive_time', node['graylog']['outputbuffer_processor_keep_alive_time'] -%>
+<%= config_option 'outputbuffer_processor_threads_core_pool_size', node['graylog']['outputbuffer_processor_threads_core_pool_size'] -%>
+<%= config_option 'outputbuffer_processor_threads_max_pool_size', node['graylog']['outputbuffer_processor_threads_max_pool_size'] -%>
+<%= config_option 'processor_wait_strategy', node['graylog']['processor_wait_strategy'] -%>
+<%= config_option 'udp_recvbuffer_sizes', node['graylog']['udp_recvbuffer_sizes'] -%>
+<%= config_option 'inputbuffer_ring_size', node['graylog']['inputbuffer_ring_size'] -%>
+<%= config_option 'inputbuffer_processors', node['graylog']['inputbuffer_processors'] -%>
+<%= config_option 'inputbuffer_wait_strategy', node['graylog']['inputbuffer_wait_strategy'] -%>
+
+# Message journal
+<%= config_option 'message_journal_enabled', node['graylog']['message_journal_enabled'] -%>
+<%= config_option 'message_journal_dir', node['graylog']['message_journal_dir'] -%>
+<%= config_option 'message_journal_max_age', node['graylog']['message_journal_max_age'] -%>
+<%= config_option 'message_journal_max_size', node['graylog']['message_journal_max_size'] -%>
+<%= config_option 'message_journal_flush_age', node['graylog']['message_journal_flush_age'] -%>
+<%= config_option 'message_journal_flush_interval', node['graylog']['message_journal_flush_interval'] -%>
+<%= config_option 'message_journal_segment_age', node['graylog']['message_journal_segment_age'] -%>
+<%= config_option 'message_journal_segment_size', node['graylog']['message_journal_segment_size'] -%>
+
+# Timeouts
+<%= config_option 'elasticsearch_request_timeout', node['graylog']['elasticsearch']['request_timeout'] -%>
+<%= config_option 'elasticsearch_index_optimization_timeout', node['graylog']['elasticsearch']['index_optimization_timeout'] -%>
+<%= config_option 'output_module_timeout', node['graylog']['output_module_timeout'] -%>
+<%= config_option 'stale_master_timeout', node['graylog']['stale_master_timeout'] -%>
+<%= config_option 'shutdown_timeout', node['graylog']['shutdown_timeout'] -%>
+<%= config_option 'ldap_connection_timeout', node['graylog']['ldap_connection_timeout'] -%>
+<%= config_option 'http_connect_timeout', node['graylog']['http_connect_timeout'] -%>
+<%= config_option 'http_read_timeout', node['graylog']['http_read_timeout'] -%>
+<%= config_option 'http_write_timeout', node['graylog']['http_write_timeout'] -%>
+<%= config_option 'stream_processing_timeout', node['graylog']['stream_processing_timeout'] -%>
+
+# Ring buffers
+<%= config_option 'ring_size', node['graylog']['ring_size'] -%>
+
+# Load balancing
+<%= config_option 'lb_recognition_period_seconds', node['graylog']['lb_recognition_period_seconds'] -%>
+<%= config_option 'lb_throttle_threshold_percentage', node['graylog']['lb_throttle_threshold_percentage'] -%>
+
+# Stream processing
+<%= config_option 'stream_processing_max_faults', node['graylog']['stream_processing_max_faults'] -%>
+
+# Intervals
+<%= config_option 'alert_check_interval', node['graylog']['server']['alert_check_interval'] -%>
+
+# MongoDB Configuration
+<%= config_option 'mongodb_uri', @mongodb_uri -%>
+<%= config_option 'mongodb_max_connections', node['graylog']['mongodb']['max_connections'] -%>
+<%= config_option 'mongodb_threads_allowed_to_block_multiplier', node['graylog']['mongodb']['threads_allowed_to_block_multiplier'] -%>
+
+# Email transport
+<%= config_option 'transport_email_enabled', node['graylog']['transport_email_enabled'] -%>
+<%= config_option 'transport_email_hostname', node['graylog']['transport_email_hostname'] -%>
+<%= config_option 'transport_email_port', node['graylog']['transport_email_port'] -%>
+<%= config_option 'transport_email_use_auth', node['graylog']['transport_email_use_auth'] -%>
+<%= config_option 'transport_email_use_tls', node['graylog']['transport_email_use_tls'] -%>
+<%= config_option 'transport_email_use_ssl', node['graylog']['transport_email_use_ssl'] -%>
+<%= config_option 'transport_email_auth_username', node['graylog']['transport_email_auth_username'] -%>
+<%= config_option 'transport_email_auth_password', @transport_email_auth_password -%>
+<%= config_option 'transport_email_subject_prefix', node['graylog']['transport_email_subject_prefix'] -%>
+<%= config_option 'transport_email_from_email', node['graylog']['transport_email_from_email'] -%>
+<%= config_option 'transport_email_web_interface_url', node['graylog']['transport_email_web_interface_url'] -%>
+
+# HTTP proxy for outgoing HTTP calls
+<%= config_option 'http_proxy_uri', node['graylog']['http_proxy_uri'] -%>
+<%= config_option 'http_non_proxy_hosts', node['graylog']['http_non_proxy_hosts'] -%>
+<%= config_option 'proxied_requests_thread_pool_size', node['graylog']['proxied_requests_thread_pool_size'] -%>
+
+# GC
+<%= config_option 'gc_warning_threshold', node['graylog']['server']['gc_warning_threshold'] -%>
+
+# Additional options
+<%= node['graylog']['server']['additional_options'] -%>

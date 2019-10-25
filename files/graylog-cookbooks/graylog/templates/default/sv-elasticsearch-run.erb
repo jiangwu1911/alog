@@ -1,0 +1,11 @@
+#!/bin/sh
+exec 2>&1
+
+umask 077
+ulimit -n 65536
+ulimit -l unlimited
+
+export ES_HOME=<%= @options[:install_directory] %>/elasticsearch
+export JAVA_HOME=<%= @options[:install_directory] %>/embedded/jre
+
+exec chpst -P -U <%= node['graylog']['user']['username'] %> -u <%= node['graylog']['user']['username'] %> $ES_HOME/bin/elasticsearch
