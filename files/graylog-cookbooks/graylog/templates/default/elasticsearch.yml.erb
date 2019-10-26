@@ -2,12 +2,6 @@ cluster.name: <%= node['graylog']['elasticsearch']['cluster_name'] %>
 path.data: <%= node['graylog']['elasticsearch']['data_directory'] %>
 path.repo: /var/opt/graylog/repository/
 path.logs: /var/log/graylog/elasticsearch/
-script.inline: false
-script.search: false
-script.engine.painless.inline: true
-script.engine.painless.stored.search:   true
-script.engine.painless.stored.aggs:     true
-script.painless.regex.enabled: true
 network.host: 127.0.0.1
 bootstrap.system_call_filter: false
 
