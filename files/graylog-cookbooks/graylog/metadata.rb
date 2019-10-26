@@ -10,4 +10,3 @@ recipe           "graylog", "Configures Graylog from Omnibus"
 supports "ubuntu"
 
 depends "runit"
-depends "timezone-ii"
