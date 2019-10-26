@@ -15,7 +15,7 @@ directory es_data_dir do
   recursive true
 end
 
-directory "#{node['graylog']['install_directory']}/elasticsearch/config/scripts" do
+directory "#{node['graylog']['install_directory']}/elasticsearch/config" do
   owner es_user
   group node['graylog']['user']['group']
   mode "0750"
